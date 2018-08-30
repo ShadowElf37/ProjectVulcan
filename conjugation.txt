@@ -1,0 +1,7 @@
+!NOU
+PLR = [NOU]s
+
+!VRB
+WEK+PST = [VRB]ed
+TP+PRS = [VRB]s
+STR+PST = [VRB]

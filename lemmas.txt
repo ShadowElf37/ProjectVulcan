@@ -1,0 +1,55 @@
+# ::+-general tags
+# word | extra tags
+
+# SINGULAR PRONOUNS
+::+PRN+NOM+SNG
+I | FP
+you | SP,ACC,PLR
+he | MAL,TP
+she | FEM,TP
+::-NOM+ACC
+me | FP
+him | MAL,TP
+her | FEM,TP,GEN
+::-ACC+GEN
+my | FP
+your | SP,PLR
+his | MAL,TP
+
+# PLURAL PRONOUNS
+::-SNG+PLR
+our | FP
+their | TP
+::-GEN+ACC
+us | FP
+them | TP
+::-ACC+NOM
+we | FP
+they | TP
+
+# PREPOSITIONS
+::-ALL+PRP
+in | LOC
+on | LOC
+at | LOC
+from | ABL
+to | LAT
+with | INS
+
+# ARTICLES
+::-ALL+ART
+the | DEF
+a | IDF
+an | IDF
+
+# VERBS
+::-ALL+VRB
+walk | WEK
+send | WEK
+sing | STR
+#{sing=PRS,sang=PST,sung=PSV}
+
+# NOUNS
+::-ALL+NOU
+dog
+cat

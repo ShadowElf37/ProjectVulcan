@@ -74,32 +74,29 @@ class LemmaDB:
 
 	def get_word(self, s):
 		return self.keys[self.vals.index(s)]
-	def get_closest(self, *tags):
+	def get_closest(self, *tags, veto=[]):
 		simidx = []
+		mods = []
 		i = -1
-		marks = []
+		marks = {}
 		for k in self.keys:
 			i += 1
 			simidx.append(0)
 			for tag in tags:
-				if tag in k:
-					j = -1
-					for block in taglist:
-						j += 1
-						if j in marks:
-							simidx[i] -= 1
-						if tag in block:
-							marks.append(j)
+				if tag[0] != '$' and tag in k:
 					simidx[i] += 1
+				elif tag[0] == '$':
+					mods.append(tag)
+			for tag in veto:
+				if tag in k:
+					simidx[i] -= 5
 					
 		m = maxindices(simidx)
 		print(simidx)
-		print([self.keys[i] for i in m])
-		print(tags)
 		#if len(maxindices(simidx)) > 1: raise ValueError("Given tags are too ambiguous")
 		w = random.choice(m)
 		print(m)
-		return self.vals[w]
+		return self.vals[w], mods
 
 lemmas = LemmaDB(keys, vals)
 
@@ -138,9 +135,9 @@ if t:
 
 class Word:
 	def __init__(self, tags, modifiers=[]):
-		self.word = lemmas.get_closest(*tags)
+		self.word, self.mods = lemmas.get_closest(*tags)
 		self.tags = lemmas.get_word(self.word)
-		self.mods = modifiers
+		self.mods += modifiers
 
 	def modify(self, mod):
 		self.mods.append(mod)

@@ -14,6 +14,7 @@ LAT
 ABL
 INS
 LOC
+FOR
 +++
 PAS
 PRS
@@ -22,6 +23,8 @@ PRG
 PSV
 PPT
 PRT
+TRN
+INT
 +++
 WEK
 STR

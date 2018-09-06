@@ -34,22 +34,54 @@ on | LOC
 at | LOC
 from | ABL
 to | LAT
+for | FOR
 with | INS
+through | LAT
+inside | LOC
+outside | LOC
+between | LOC
+against | LOC
+betwixt | LOC
+around | LOC
 
 # ARTICLES
 ::-ALL+ART
 the | DEF
 a | IDF
-an | IDF
+#an | IDF
 
 # VERBS
 ::-ALL+VRB
-walk | WEK
-send | WEK
-sing | STR
-#{sing=PRS,sang=PST,sung=PSV}
+walk | WEK,INT,TRN
+send | WEK,TRN
+sing | STR,INT,TRN
+write | STR,INT,TRN
+read | STR,INT,TRN
+kill | WEK,TRN
+throw | STR,TRN
+draw | STR,TRN
+see | STR,TRN,INT
+do | STR,TRN
+#sex | STR,TRN
+#{sing-sang-sung}
 
 # NOUNS
 ::-ALL+NOU
 dog
 cat
+paper
+book
+Despacito
+pencil
+floor
+table
+chair
+cup
+kebab
+man
+woman
+cancer
+refugee
+school
+child
+computer

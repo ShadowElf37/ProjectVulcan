@@ -1,7 +1,4 @@
-!NOU
-PLR = [NOU]s
+NOU+$PLR = +s
 
-!VRB
-WEK+PST = [VRB]ed
-TP+PRS = [VRB]s
-STR+PST = [VRB]
+VRB+WEK+$PST = +ed
+VRB+$PRS+$@SUBJECT.NOUN:TP = +s
